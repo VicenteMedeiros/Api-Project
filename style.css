@@ -20,10 +20,10 @@ input{
     box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.5);
     
 }
-.buscaCep{
+#buscaCep{
     padding-right: 1rem;
 }
-.buscaCep label{
+#buscaCep label{
     font-size: 2rem;
 }
 
