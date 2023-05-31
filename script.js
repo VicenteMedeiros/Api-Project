@@ -27,6 +27,24 @@ function fetchBtc() {
     btcDisplay.innerText = ('R$ ' + btcJson.BRL.buy).replace('.', ',');
   })
 }
-setInterval(fetchBtc, 1000 * 30);
+setInterval(fetchBtc, 100);
 
 fetchBtc();
+
+//Piadas via API
+
+const btnProxima = document.querySelector('.proxima');
+const paragrafoPiada = document.querySelector('.piada');
+
+function puxarPiada() {
+  fetch('https://api.chucknorris.io/jokes/random')
+  .then(r => r.json())
+  .then(piada => {
+    paragrafoPiada.innerText = piada.value;
+  })
+}
+
+btnProxima.addEventListener('click', puxarPiada);
+
+puxarPiada();
+
